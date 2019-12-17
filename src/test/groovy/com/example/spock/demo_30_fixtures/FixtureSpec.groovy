@@ -12,13 +12,13 @@ class FixtureSpec extends Specification {
 
     def "should generate a person from a fixture"() {
         given:
-        List<Person> persons = Fixture.from(ImmutablePerson).gimme("invalid")
+        List<Person> persons = Fixture.from(ImmutablePerson).gimme(2,"invalid")
 
         when:
         println persons
 
         then:
-        persons.size() == 1
+        persons.size() == 2
     }
 
 }
